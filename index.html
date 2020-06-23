@@ -3,23 +3,23 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta content="width=device-width, initial-scale=1" name="viewport">
-		<title>Mask Map | cjosh-123</title>
+		<title>口罩地圖 | cjosh-123</title>
 		
-		<meta content="Timely display the health insurance special pharmacies that can buy masks nearby, automatically updated in 30 seconds" name="description"/>
+		<meta content="及時顯示附近可購買口罩的健保特約藥局，30秒自動更新。" name="description"/>
         <meta content="Kai Wu" name="author"/>
 		<meta content="global" name="distribution"/>
 		<meta content="general" name="rating"/>
 		
 		<meta content="cjosh-123" property="og:site_name"/>
-		<meta content="Mask Map | cjosh-123" property="og:title"/>
-		<meta content="Timely display the health insurance special pharmacies that can buy masks nearby, automatically updated in 30 seconds" property="og:description"/>
+		<meta content="口罩地圖 | cjosh-123" property="og:title"/>
+		<meta content="及時顯示附近可購買口罩的健保特約藥局，30秒自動更新。" property="og:description"/>
 		<meta content="zh_tw" property="og:locale"/>
 		
 		<meta content="website" property="og:type"/>
         <meta content="screenshot.jpg" property="og:image"/>
         <meta content="1920" property="og:image:width"/>
         <meta content="897" property="og:image:height"/>
-		<meta content="Mask Map" property="og:image:alt"/>
+		<meta content="口罩地圖" property="og:image:alt"/>
 				
 		
 		
@@ -39,63 +39,61 @@
 	</head>
 	<body>
 		<div id="information">
-			<h1 id="logo">Mask Map</h1>
+			<h1 id="logo">口罩地圖</h1>
 			<div class="legend">
-				<div class="sufficient">Above 50%</div>
+				<div class="sufficient">50%以上</div>
 				<div class="warning">49%~21%</div>
-				<div class="emergency">Below 20%</div>
-				<div class="sold-out">Out of stock</div>
+				<div class="emergency">20%以下</div>
+				<div class="sold-out">無存貨</div>
 			</div>
 			<div class="icon-information">
 				<div class="item">
-					<div class="area"></div><span>More pharmacies nearby</span>
+					<div class="area"></div><span>附近有 2 間以上的藥局</span>
 				</div>
 				<div class="item">
-					<img src="images/sufficient.svg" alt="Pharmacy icon"><span>Pharmacy</span></span>
+					<img src="images/sufficient.svg" alt="藥局圖標"><span>藥局</span></span>
 				</div>
 			</div>
 			<ul id="description">
-				<li>The icons on the map can be clicked, and the detailed information of the pharmacy will be displayed after clicking the icon of the pharmacy</li>
-				<li>Some pharmacies have adopted the method of issuing number plates to facilitate people to buy masks. The system cannot display the number of number plates sent.</li>
-				<li>The number of masks is based on the actual stock of the pharmacy, and the number of online inquiries is for reference only</li>
+				<li>地圖上的圖標皆可以點擊，藥局的詳細資訊在點擊該藥局的圖標後會顯示</li>
+				<li>部分藥局因採發放號碼牌方式，方便民眾購買口罩，系統目前無法顯示已發送號碼牌數量</li>
+				<li>口罩數量以藥局實際存量為主，線上查詢之數量僅供參考</li>
 >
 			</ul>
-			<div class="copyright">Created in 2020 by <a href="https://www.github.com/cjosh-123">Yao Chang</a></div> Instagram: <a href="https://www.instagram.com/y_josh.chang/">y_josh.chang</a></div> 
+			<div class="copyright">Created in 2020 by <a href="https://www.github.com/cjosh-123">Josh</a></div> Instagram: <a href="https://www.instagram.com/y_josh.chang/">y_josh.chang</a></div>
 		</div>
 		<div id="control-panel">
-			<button id="mask-toggle" data-tooltip="Switch Adult / Child's Mask"><span class="fas fa-child"></span></button>
-			<button id="current-location" data-tooltip="Move to current location"><span class="fas fa-location-arrow"></span></button>
-			<button id="zoom-in" data-tooltip="Zoom in"><span class="fas fa-plus"></span></button>
-			<button id="zoom-out" data-tooltip="Zoom out"><span class="fas fa-minus"></span></button>
-			<button id="help" data-tooltip="Help"><span class="fas fa-question"></span></button>
-			<button id="menu" data-tooltip="Menu"><span class="fas fa-chevron-up"></span></button>
+			<button id="mask-toggle" data-tooltip="切換成人 / 兒童口罩"><span class="fas fa-child"></span></button>
+			<button id="current-location" data-tooltip="移動至目前位置"><span class="fas fa-location-arrow"></span></button>
+			<button id="zoom-in" data-tooltip="放大"><span class="fas fa-plus"></span></button>
+			<button id="zoom-out" data-tooltip="縮小"><span class="fas fa-minus"></span></button>
+			<button id="help" data-tooltip="使用手冊"><span class="fas fa-question"></span></button>
+			<button id="menu" data-tooltip="收合"><span class="fas fa-chevron-up"></span></button>
 		</div>
 		<div id="guide">
-			<h2>Mask map instruction</h2>
-			<p>First, thank you for using this mask map.Now I'll start explain how to use the buttons in the interface.</p>
-			<h3>Switch to Adult / Child's Masks</h3>
+			<h2>口罩地圖使用說明手冊</h2>
+			<p>首先，非常感謝您使用本口罩地圖，接下來為您說明介面中各按鈕的使用方法。</p>
+			<h3>切換成人 / 兒童口罩</h3>
 			<button><span class="fas fa-child"></span></button>
-			<p>Each marked point on the map will display the stock status of the pharmacy. The default is to display the stock status of the mask. The button above will switch to display the stock status of the child mask and the button will turn to a green bottom. Allows you to quickly distinguish whether the inventory status of the adult mask is displayed or the inventory status of the child mask.</p>
-			<h3>Move to your location</h3>
+			<p>地圖中每個標記點會顯示該藥局的庫存狀況，預設是顯示成人口罩的庫存狀況，上方的這個按鈕按下後切換成顯示兒童口罩的庫存狀況並且該按鈕會變成綠色底。讓您能快速辨別現在顯示的是成人口罩的庫存狀況，還是兒童口罩的庫存狀況。</p>
+			<h3>移動至目前位置</h3>
 			<button><span class="fas fa-location-arrow"></span></button>
-			<p>If you cannot find your current location when looking for a pharmacy, then this button can help you return to your current location immediately. Of course, you must first authorize this map to obtain your current location. Only the current location will be marked when you click for the first time. Location, click back to move the center point of the map to the current location.</p>
-			<h3>Zoom in </h3>
+			<p>若您因為尋找藥局時找不到目前位置，那麼這個按鈕可以幫助您馬上回到目前位置，當然您必須先授權本地圖取得您的目前位置才行，第一次點擊時只會標出目前位置，往後的點擊則會將地圖中心點移動至目前位置。</p>
+			<h3>放大</h3>
 			<button><span class="fas fa-plus"></span></button>
-			<p>This button is use to zoom the map </p>
-			<h3>Zoom out</h3>
+			<p>這個按鈕是用來將地圖放大的。</p>
+			<h3>縮小</h3>
 			<button><span class="fas fa-minus"></span></button>
-			<p>This button is use to zoom out the map</p>
-			<h3>Menu</h3>
+			<p>這個按鈕是用來將地圖縮小的。</p>
+			<h3>使用手冊</h3>
 			<button><span class="fas fa-question"></span></button>
-			<p>This button is the button to open this meun, press again to close this menu</p>
+			<p>這個按鈕是開啟本手冊的按鈕，再按一次可以將本手冊關閉。</p>
 		</div>
 		<div id="app"></div>
 		<noscript class="noscript">
 			<link rel="stylesheet" href="css/noscript.css">
-			<h1>Mask Map</h1>
-			<span class="description">Because this map requires JavaScript, please enable JavaScript in your browser! Thank you for your cooperation and understanding.
-
-			</span>
+			<h1>口罩地圖</h1>
+			<span class="description">因為本地圖需要使用 JavaScript，所以請您開啟瀏覽器的 JavaScript 功能！感謝配合及諒解。</span>
 		</noscript>
 	</body>
 </html>
