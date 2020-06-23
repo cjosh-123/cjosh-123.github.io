@@ -52,16 +52,16 @@ require(["pace.min","leaflet"],function(){
 			if (navigator.geolocation) {
 				let pos = navigator.geolocation.watchPosition(function(geo){
 					currentMar.setLatLng([geo.coords.latitude,geo.coords.longitude]);
-					currentMar.bindPopup("<p class='user-location'>Current position</p><p class='loc-accuracy'>GPS Accuracy："+Math.round(geo.coords.accuracy * 100) / 100+" 公尺</p>");
+					currentMar.bindPopup("<p class='user-location'>目前位置</p><p class='loc-accuracy'>GPS 精確度："+Math.round(geo.coords.accuracy * 100) / 100+" 公尺</p>");
 					currentMar.addTo(map);
 					storeMarkers.eachLayer(function(layer){
 						layer.getPopup().getContent().getElementsByClassName("store-distance")[0].innerText = geoDistance([[geo.coords.latitude,geo.coords.longitude],[layer.getPopup().getContent().dataset.lat,layer.getPopup().getContent().dataset.lng]]);
 					});
 					locationPermit = true;
 				},function(){
-					alert("Failed to obtain the positioning data, so the current position cannot be displayed");
+					alert("定位資料取得失敗，故不能進行目前位置顯示");
 					storeMarkers.eachLayer(function(layer){
-						layer.getPopup().getContent().getElementsByClassName("store-distance")[0].innerText = "No positioning and no distance";
+						layer.getPopup().getContent().getElementsByClassName("store-distance")[0].innerText = "無定位無距離";
 					});
 					locationPermit = false;
 					currentMar.remove();
@@ -115,12 +115,12 @@ require(["pace.min","leaflet"],function(){
 						numContainer = L.DomUtil.create("p","number-container",container);
 					switch (i) {
 					case 0:
-						label.innerText = "Number of adult masks";
+						label.innerText = "成人口罩數量";
 						container.classList.add(storeClass[markerOrder("adult",store.properties.mask_adult)]);
 						numContainer.innerHTML = "<span class='number'>" + store.properties.mask_adult + "</span> 片";
 						break;
 					case 1:
-						label.innerText = "Number of child's masks";
+						label.innerText = "兒童口罩數量";
 						container.classList.add(storeClass[markerOrder("child",store.properties.mask_child)]);
 						numContainer.innerHTML = "<span class='number'>" + store.properties.mask_child + "</span> 片";
 						break;
